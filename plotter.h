@@ -19,10 +19,7 @@ private:
 	int ySize;
     std::string  fileName;
     int fileLineCount;
-
     Color* pixelColor;
-
-
 
 public:
 	Plotter(){}
