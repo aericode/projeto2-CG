@@ -22,7 +22,7 @@ int main(){
 	Plotter plotter(nx,ny,"acabou.ppm");
 
 
-	for (int j = 0; j <  ny-1; j++){
+	for (int j = ny-1; j >= 0 ; j--){
 		for(int i = 0; i <  nx; i++){
 			float u = float(i) / float (nx);
 			float v = float(j) / float (ny);

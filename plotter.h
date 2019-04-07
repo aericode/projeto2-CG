@@ -83,9 +83,11 @@ public:
 		myfile<< "255" <<std::endl;
 
 
-		for(int i = 4;i < fileLineCount;i++){
+		for(int i = 4;i < fileLineCount - 1;i++){
 			myfile<<pixelColor[i]<<std::endl;
 		}
+
+		myfile<<pixelColor[fileLineCount-1];
 	}
 };
 
