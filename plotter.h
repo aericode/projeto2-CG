@@ -45,7 +45,7 @@ public:
 	}
 
 	int matrixToLine(int x, int y){
-		return x + y*xSize;
+		return x + ( (ySize-1)-y)*xSize;
 	}
 
 

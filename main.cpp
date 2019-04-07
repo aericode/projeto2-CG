@@ -39,6 +39,7 @@ int main(){
 			plotter.changePixel(i,j, Color(ir,ig,ib));
 		}
 	}
+	plotter.changePixel(100,0, Color(255,0,0));
 	plotter.plotFile();
 
 }
