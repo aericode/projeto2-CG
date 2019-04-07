@@ -19,7 +19,7 @@ int main(){
 	int nx = 200;
 	int ny = 100;
 
-	Plotter plotter(nx,ny,"acabou.ppm");
+	Plotter plotter(nx,ny,"teste.ppm");
 
 
 	for (int j = ny-1; j >= 0 ; j--){
