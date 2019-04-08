@@ -29,7 +29,7 @@ int main(){
 
 			ray r  = cam.generateRay(u,v); 
 
-			vec3 col = cam.fadeBG(r);
+			vec3 col = cam.sample(r);
 
 
 			int ir  = int(255.99*col[0]);

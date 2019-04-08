@@ -44,19 +44,21 @@ public:
 		return (1.0-t)*vec3(1.0,1.0,1.0) + t*vec3(0.5,0.7,1.0);
 	}
 
+	//amostra para exibição de objetos em cena
+	vec3 sample(const ray& r){
+		if(hit_sphere(vec3(0,0,-1),0.5,r)){
+			return vec3(1,0,0);
+		}
+
+		return fadeBG(r);
+	}
+
 	ray generateRay(float x, float y){
 		vec3 direction = corner + x*horizontal + y*vertical;
 
 		ray generated(origin, direction);
 
 		return generated;
-	}
-
-	void present(){
-		cout<<"origin "<<origin<<endl;
-		cout<<"vertical "<<vertical<<endl;
-		cout<<"horizontal "<<horizontal<<endl;
-		cout<<"corner "<<corner<<endl;
 	}
 
 };
