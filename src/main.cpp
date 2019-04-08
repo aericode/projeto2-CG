@@ -12,14 +12,14 @@ typedef vec3 Color;
 
 int main(){
 
-	JSON obj = parseFile("scene.json");
+	JSON obj = parseFile("./jsonInput/scene.json");
 	Camera cam = cameraFromJSON(obj);
 
 
 	int nx = 200;
 	int ny = 100;
 
-	Plotter plotter(nx,ny,"teste.ppm");
+	Plotter plotter(nx,ny,"./imageOutput/teste.ppm");
 
 
 	for (int j = ny-1; j >= 0 ; j--){
