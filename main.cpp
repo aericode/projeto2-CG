@@ -1,20 +1,20 @@
 #include <iostream>
 #include <fstream>
 
+#include "json.hpp"
+#include "jsonReader.h"
 #include "camera.h"
 #include "ray.h"
 #include "plotter.h"
 
+using json::JSON;
 typedef vec3 Color;
 
 int main(){
 
-	vec3 corner(-2.0,-1.0,-1.0);
-	vec3 hor   (4.0,0.0,0.0);
-	vec3 ver   (0.0,2.0,0.0);
-	vec3 origin(0.0,0.0,0.0);
+	JSON obj = parseFile("scene.json");
+	Camera cam = cameraFromJSON(obj);
 
-	Camera cam(origin,ver,hor,corner);
 
 	int nx = 200;
 	int ny = 100;
@@ -41,5 +41,6 @@ int main(){
 	}
 	plotter.changePixel(100,0, Color(255,0,0));
 	plotter.plotFile();
+	
 
 }
